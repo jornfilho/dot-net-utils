@@ -58,13 +58,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Converters\IntegerConverter\FormShort.cs" />
-    <Compile Include="Converters\IntegerConverter\FromByte.cs" />
-    <Compile Include="Converters\IntegerConverter\FromDecimal.cs" />
-    <Compile Include="Converters\IntegerConverter\FromFloat.cs" />
-    <Compile Include="Converters\IntegerConverter\FromDouble.cs" />
-    <Compile Include="Converters\IntegerConverter\FromLong.cs" />
-    <Compile Include="Converters\IntegerConverter\FromString.cs" />
+    <Compile Include="Converters\IntegerConverter\ToIntegerFormShort.cs" />
+    <Compile Include="Converters\IntegerConverter\ToIntegerFromByte.cs" />
+    <Compile Include="Converters\IntegerConverter\ToIntegerFromDecimal.cs" />
+    <Compile Include="Converters\IntegerConverter\ToIntegerFromFloat.cs" />
+    <Compile Include="Converters\IntegerConverter\ToIntegerFromDouble.cs" />
+    <Compile Include="Converters\IntegerConverter\ToIntegerFromLong.cs" />
+    <Compile Include="Converters\IntegerConverter\ToIntegerFromString.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

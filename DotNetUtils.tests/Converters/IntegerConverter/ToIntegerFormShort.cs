@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace DotNetUtils.tests.Converters.IntegerConverter
 {
     [TestFixture]
-    public class FromShort
+    public class ToIntegerFromShort
     {
         [TestCase(short.MinValue, -1, ExpectedResult = short.MinValue)]
         [TestCase(-128, 0, ExpectedResult = -128)]
@@ -13,7 +13,7 @@ namespace DotNetUtils.tests.Converters.IntegerConverter
         [TestCase(1, 0, ExpectedResult = 1)]
         [TestCase(128, 0, ExpectedResult = 128)]
         [TestCase(short.MaxValue, 0, ExpectedResult = short.MaxValue)]
-        public int ToIntegerFromShort(short shortValue, int defaultValue = 0)
+        public int ToInteger_FromShort(short shortValue, int defaultValue = 0)
         {
             return shortValue.ToInteger(defaultValue);
         }
@@ -26,7 +26,7 @@ namespace DotNetUtils.tests.Converters.IntegerConverter
         [TestCase(128, 0, ExpectedResult = 128)]
         [TestCase(short.MaxValue, 0, ExpectedResult = short.MaxValue)]
         [TestCase(null, -1, ExpectedResult = -1)]
-        public int ToIntegerFromNullableShort(short? shortValue, int defaultValue = 0)
+        public int ToInteger_FromNullableShort(short? shortValue, int defaultValue = 0)
         {
             return shortValue.ToInteger(defaultValue);
         }

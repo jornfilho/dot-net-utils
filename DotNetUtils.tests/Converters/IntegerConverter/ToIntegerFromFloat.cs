@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace DotNetUtils.tests.Converters.IntegerConverter
 {
     [TestFixture]
-    public class FromFloat
+    public class ToIntegerFromFloat
     {
         [TestCase(float.MinValue, -1, ExpectedResult = -1)]
         [TestCase(-1000000000000000.12345f, 0, ExpectedResult = 0)]
@@ -20,7 +20,7 @@ namespace DotNetUtils.tests.Converters.IntegerConverter
         [TestCase(1000000000000.12345f, 0, ExpectedResult = 0)]
         [TestCase(1000000000000000.12345f, 0, ExpectedResult = 0)]
         [TestCase(float.MaxValue, -1, ExpectedResult = -1)]
-        public int ToIntegerFromFloat(float floatValue, int defaultValue = 0)
+        public int ToInteger_FromFloat(float floatValue, int defaultValue = 0)
         {
             return floatValue.ToInteger(defaultValue);
         }
@@ -40,7 +40,7 @@ namespace DotNetUtils.tests.Converters.IntegerConverter
         [TestCase(1000000000000000.12345f, 0, ExpectedResult = 0)]
         [TestCase(float.MaxValue, -1, ExpectedResult = -1)]
         [TestCase(null, -1, ExpectedResult = -1)]
-        public int ToIntegerFromNullableFloat(float? floatValue, int defaultValue = 0)
+        public int ToInteger_FromNullableFloat(float? floatValue, int defaultValue = 0)
         {
             return floatValue.ToInteger(defaultValue);
         }
