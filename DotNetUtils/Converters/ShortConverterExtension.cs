@@ -13,7 +13,7 @@ namespace DotNetUtils.Converters
         /// Convert string in short value
         /// </summary>
         /// <param name="stringValue">String value</param>
-        /// <param name="defaultValue">Default integer value. Default is 0</param>
+        /// <param name="defaultValue">Default short value. Default is 0</param>
         /// <param name="decimalSeparator">Decimal separator. Default is .</param>
         /// <param name="milharSeparator">Milhar separator. Default is ,</param>
         public static short ToShort(this string stringValue, short defaultValue = 0, char decimalSeparator = '.', char milharSeparator = ',')
@@ -85,7 +85,7 @@ namespace DotNetUtils.Converters
         /// <summary>
         /// Convert nullable int value to short value
         /// </summary>
-        /// <param name="intValue">Nullable integer value</param>
+        /// <param name="intValue">Nullable short value</param>
         /// <param name="defaultValue">Default short value. Default is 0</param>
         public static short ToShort(this int? intValue, short defaultValue = 0)
         {
