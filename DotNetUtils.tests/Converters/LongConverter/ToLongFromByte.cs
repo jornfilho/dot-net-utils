@@ -1,19 +1,19 @@
 ﻿using DotNetUtils.Converters;
 using NUnit.Framework;
 
-namespace DotNetUtils.tests.Converters.IntegerConverter
+namespace DotNetUtils.tests.Converters.LongConverter
 {
     [TestFixture]
-    public class ToIntegerFromByte
+    public class ToLongFromByte
     {
         [TestCase(byte.MinValue, ExpectedResult = byte.MinValue)]
         [TestCase(0, ExpectedResult = 0)]
         [TestCase(1, ExpectedResult = 1)]
         [TestCase(128, ExpectedResult = 128)]
         [TestCase(byte.MaxValue, ExpectedResult = byte.MaxValue)]
-        public int ToInteger_FromByte(byte byteValue)
+        public long ToLong_FromByte(byte byteValue)
         {
-            return byteValue.ToInteger();
+            return byteValue.ToLong();
         }
 
         [TestCase(byte.MinValue, -1, ExpectedResult = byte.MinValue)]
@@ -22,9 +22,9 @@ namespace DotNetUtils.tests.Converters.IntegerConverter
         [TestCase(128, 0, ExpectedResult = 128)]
         [TestCase(byte.MaxValue, 0, ExpectedResult = byte.MaxValue)]
         [TestCase(null, -1, ExpectedResult = -1)]
-        public int ToInteger_FromNullableByte(byte? byteValue, int defaultValue = 0)
+        public long ToLong_FromNullableByte(byte? byteValue, long defaultValue = 0)
         {
-            return byteValue.ToInteger(defaultValue);
+            return byteValue.ToLong(defaultValue);
         }
 
         
