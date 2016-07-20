@@ -97,8 +97,12 @@ namespace DotNetUtils.Converters
         {
             if (doubleValue > long.MaxValue || doubleValue <= long.MinValue)
                 return defaultValue;
+            
+            var decimalValue = Convert.ToDecimal(doubleValue);
+            if (decimalValue > long.MaxValue || decimalValue <= long.MinValue)
+                return defaultValue;
 
-            return (long)Convert.ToDecimal(doubleValue);
+            return (long)decimalValue;
         }
 
         /// <summary>
@@ -121,7 +125,11 @@ namespace DotNetUtils.Converters
             if (floatValue > long.MaxValue || floatValue <= long.MinValue)
                 return defaultValue;
 
-            return (long)Convert.ToDecimal(floatValue);
+            var decimalValue = Convert.ToDecimal(floatValue);
+            if (decimalValue > long.MaxValue || decimalValue <= long.MinValue)
+                return defaultValue;
+
+            return (long)decimalValue;
         }
 
         /// <summary>

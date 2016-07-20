@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converters\ShortConverterExtension.cs" />
     <Compile Include="Converters\LongConverterExtension.cs" />
     <Compile Include="Converters\IntegerConverterExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

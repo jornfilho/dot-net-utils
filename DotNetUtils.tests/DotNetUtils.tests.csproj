@@ -58,6 +58,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Converters\ShortConverter\ToShortFromLong.cs" />
+    <Compile Include="Converters\ShortConverter\ToShortFromByte.cs" />
+    <Compile Include="Converters\ShortConverter\ToShortFromDecimal.cs" />
+    <Compile Include="Converters\ShortConverter\ToShortFromDouble.cs" />
+    <Compile Include="Converters\ShortConverter\ToShortFromFloat.cs" />
+    <Compile Include="Converters\ShortConverter\ToShortFromInteger.cs" />
+    <Compile Include="Converters\ShortConverter\ToShortFromString.cs" />
     <Compile Include="Converters\LongConverter\ToLongFromShort.cs" />
     <Compile Include="Converters\LongConverter\ToLongFromByte.cs" />
     <Compile Include="Converters\LongConverter\ToLongFromDecimal.cs" />
