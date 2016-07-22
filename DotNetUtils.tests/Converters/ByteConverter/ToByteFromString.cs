@@ -6,6 +6,8 @@ namespace DotNetUtils.tests.Converters.ByteConverter
     [TestFixture]
     public class ToByteFromString
     {
+        [TestCase("1", 0, '.', ',', ExpectedResult = 1)]
+        [TestCase("1.", 0, '.', ',', ExpectedResult = 1)]
         [TestCase("0.00", 1, '.', ',', ExpectedResult = 0)]
         [TestCase("0.01", 1, '.', ',', ExpectedResult = 0)]
         [TestCase("0.11", 1, '.', ',', ExpectedResult = 0)]
@@ -16,6 +18,7 @@ namespace DotNetUtils.tests.Converters.ByteConverter
         [TestCase("11,111.11", 0, '.', ',', ExpectedResult = 0)]
         [TestCase("111,111.11", 0, '.', ',', ExpectedResult = 0)]
         [TestCase("1,111,111.11", 0, '.', ',', ExpectedResult = 0)]
+        [TestCase("1,111,111", 0, '.', ',', ExpectedResult = 0)]
         [TestCase("USD 1,111,111.11", 0, '.', ',', ExpectedResult = 0)]
         [TestCase("U$ 1,111,111.11", 0, '.', ',', ExpectedResult = 0)]
         [TestCase("100%", 0, '.', ',', ExpectedResult = 100)]

@@ -40,10 +40,7 @@ namespace DotNetUtils.Converters
             }
 
             long parsedLong;
-            if (long.TryParse(stringValue, out parsedLong))
-                defaultValue = parsedLong;
-
-            return defaultValue;
+            return long.TryParse(stringValue, out parsedLong) ? parsedLong : defaultValue;
         }
 
         /// <summary>

@@ -40,10 +40,7 @@ namespace DotNetUtils.Converters
             }
 
             int parsedInt;
-            if (int.TryParse(stringValue, out parsedInt))
-                defaultValue = parsedInt;
-
-            return defaultValue;
+            return int.TryParse(stringValue, out parsedInt) ? parsedInt : defaultValue;
         }
 
         /// <summary>

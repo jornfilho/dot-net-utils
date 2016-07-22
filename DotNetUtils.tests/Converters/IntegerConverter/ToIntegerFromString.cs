@@ -6,6 +6,8 @@ namespace DotNetUtils.tests.Converters.IntegerConverter
     [TestFixture]
     public class ToIntegerFromString
     {
+        [TestCase("1", 0, '.', ',', ExpectedResult = 1)]
+        [TestCase("1.", 0, '.', ',', ExpectedResult = 1)]
         [TestCase("0.00", -1, '.', ',', ExpectedResult = 0)]
         [TestCase("0.01", -1, '.', ',', ExpectedResult = 0)]
         [TestCase("0.11", -1, '.', ',', ExpectedResult = 0)]
@@ -16,6 +18,7 @@ namespace DotNetUtils.tests.Converters.IntegerConverter
         [TestCase("11,111.11", 0, '.', ',', ExpectedResult = 11111)]
         [TestCase("111,111.11", 0, '.', ',', ExpectedResult = 111111)]
         [TestCase("1,111,111.11", 0, '.', ',', ExpectedResult = 1111111)]
+        [TestCase("1,111,111", 0, '.', ',', ExpectedResult = 1111111)]
         [TestCase("USD 1,111,111.11", 0, '.', ',', ExpectedResult = 1111111)]
         [TestCase("U$ 1,111,111.11", 0, '.', ',', ExpectedResult = 1111111)]
         [TestCase("100%", 0, '.', ',', ExpectedResult = 100)]

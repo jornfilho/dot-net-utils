@@ -40,10 +40,7 @@ namespace DotNetUtils.Converters
             }
 
             short parsedShort;
-            if (short.TryParse(stringValue, out parsedShort))
-                defaultValue = parsedShort;
-
-            return defaultValue;
+            return short.TryParse(stringValue, out parsedShort) ? parsedShort : defaultValue;
         }
 
         /// <summary>

@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Converters\ByteConverterExtension.cs" />
+    <Compile Include="Converters\DecimalConverterExtension.cs" />
     <Compile Include="Converters\ShortConverterExtension.cs" />
     <Compile Include="Converters\LongConverterExtension.cs" />
     <Compile Include="Converters\IntegerConverterExtension.cs" />

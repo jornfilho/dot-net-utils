@@ -65,6 +65,21 @@
     <Compile Include="Converters\ByteConverter\ToByteFromLong.cs" />
     <Compile Include="Converters\ByteConverter\ToByteFromString.cs" />
     <Compile Include="Converters\ByteConverter\ToByteFromShort.cs" />
+    <Compile Include="Converters\DecimalConverter\ToDecimalFromDouble.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Converters\DecimalConverter\ToDecimalFromFloat.cs" />
+    <Compile Include="Converters\DecimalConverter\ToDecimalFromShort.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Converters\DecimalConverter\ToDecimalFromByte.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Converters\DecimalConverter\ToDecimalFromLong.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Converters\DecimalConverter\ToDecimalFromString.cs" />
+    <Compile Include="Converters\DecimalConverter\ToDecimalFromInteger.cs" />
     <Compile Include="Converters\ShortConverter\ToShortFromLong.cs" />
     <Compile Include="Converters\ShortConverter\ToShortFromByte.cs" />
     <Compile Include="Converters\ShortConverter\ToShortFromDecimal.cs" />

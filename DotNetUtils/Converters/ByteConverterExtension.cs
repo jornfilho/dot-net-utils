@@ -40,10 +40,7 @@ namespace DotNetUtils.Converters
             }
 
             byte parsedByte;
-            if (byte.TryParse(stringValue, out parsedByte))
-                defaultValue = parsedByte;
-
-            return defaultValue;
+            return byte.TryParse(stringValue, out parsedByte) ? parsedByte : defaultValue;
         }
 
         /// <summary>
